@@ -26,8 +26,6 @@ You can still do this by hand this is called *desk checking*.
 
 I.e a sum pattern, take a specified input (an array of inputs) and the the output which gives the sum of an array is an algorithm.
 
-
-
 ## Now Some C++
 
 Now let's explore some of the content for this subject.
@@ -52,8 +50,6 @@ Now let's explore some of the content for this subject.
     
     * We're going to explore some tools for making algorithms.
 
-
-
 ## Some Actual C++ (For Real)
 
 ### Topics
@@ -74,11 +70,7 @@ Now let's explore some of the content for this subject.
 
 * Lists & Linked Lists (An actual data structure)
 
-
-
 Additionally we may additionally talk about the C++ memory model.
-
-
 
 ### Strings in C++
 
@@ -108,11 +100,7 @@ Like C# to C++, C++ was how can we improve C and make it object oriented.
   
   The benefit from C++ is it allows us to wrap code into objects i.e converting a char array into a string class.
 
-
-
 All the documentation for the string class and all classes are available online.
-
-
 
 ### Arrays in C++
 
@@ -150,8 +138,6 @@ These are all statically created? What does this mean?
 
 In short with C++ don't use *new* unless you have to / mean it.
 
-
-
 ![Stack & Heap.png](C:\Users\shaan\Documents\GitHub\Data Structures and Algorithms\Week 1\Stack & Heap.png)
 
 I.e a factory method - is a method that creates stuff i.e standardized creation method i.a factory method has things that exist outside of the method so they are not locally on static and have to be created manually i.e on the heap. Whilst java secretly does this in C++ it is known.
@@ -172,11 +158,7 @@ I.e a factory method - is a method that creates stuff i.e standardized creation 
 
 * In some cases C++ does automatically initalizes things, however in most cases it doesn't automatically initalize anything, it usually *trusts* the programmer thinking you've done this for a reason.
 
-
-
 Typically what you have is a hybrid of static & dynamic declorations i.e when creating a datastructure. I.e when creating a datastructure it only needs to exist in a specific scope i.e in a object, so whilst that object exists it stays around. So this avoids the requirement of using "New" as much. And inside the object we have automated methods to clean up the rest of the items inside of the object. Hence we need a thing to delete the object but not everything inside of the object itself.
-
-
 
 ### Arrays in C++
 
@@ -275,7 +257,7 @@ public class myClass : public parentClass //The colon is inheritence
     //blocked together, order doesn't matter and we can repeat
     private:
     int privateInt;
-    
+
     public:
     int getPrivateInt();
     void setPrivateInt(int newValue);
@@ -299,8 +281,6 @@ public class myClass : public parentClass //The colon is inheritence
 
 * The convention to use header and source files are entirely semenatic, however it is just best practice to do so. In modern day compilers it does occasionally cause errors.
 
-
-
 ### Header Files
 
 * So what do we do with header files if they have no code?
@@ -308,8 +288,6 @@ public class myClass : public parentClass //The colon is inheritence
   * Declare things in the right order for #Includes
   
   * Create the equivilent of interfaces (virtual classes!)
-
-
 
 ### Some Code
 
@@ -324,28 +302,28 @@ program.cpp
 int main()
 {
     int a[] = {1, 2};
-    
+
     std::cout << a[0] << ", " << a[1] << std::endl;
-    
+
 //If we do a[2] it will give us a huge number, which will give us no answer with no bounds checking or anything.
 
     //We do get a slightly different thing w/ pointers
     int * a;
     std::cout << a[1] << a[2] << std::endl;
     //We get a segmentation fault (what do you think what happens here), it's not like we can do this to a pointer. What occurs we assign a pointer of a with a ridicioulous amount of memory required (impossible amount) and as such a segfault occurs
-    
+
     int * a = 5;
     //This will give us a conversion warning saying we shouldn't do this
     
     int foo = 5;
     int * a = &foo;
     int ** b = & a; //Nothing special about pointers, we can have a pointer to a pointer i.e a 2D array.
-    
+
     std:: << a << ", " << *a << std::endl;
     //We should get address and the int.
-    
+
     std::cout << b[0] << std::endl;
-    
+
     //For loops look the same
     for(int i = 0; i < 10; i++)
     {
@@ -353,41 +331,3 @@ int main()
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
